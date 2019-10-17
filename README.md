@@ -16,4 +16,4 @@
 
 v1.0<br>
 Created main and result page.<br>
-First script basen on render_template and requests Flask modules
+First scripts based on render_template and requests Flask modules
