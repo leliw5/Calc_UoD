@@ -1,0 +1,80 @@
+body {
+  font-family:      Verdana, Geneva, Arial, sans-serif;
+  font-size:        medium;
+  color:       #ffffff;
+  background-color: #607d8b;
+  margin-top:       5%;
+  margin-bottom:    5%;
+  margin-left:      20%;
+  margin-right:     20%;
+  border:           0px dotted gray;
+  padding:          10px 10px 10px 10px;
+}
+a {
+  text-decoration:  none; 
+  font-weight:      600; 
+}
+a:hover {
+  text-decoration:  underline;
+}
+a img {
+  border:           0;
+}
+h2 {
+  font-size:        200%;
+}
+table {
+  margin-left:      20px;
+  margin-right:     20px;
+  caption-side:     bottom;
+  border-collapse:  collapse;
+}
+td, th {
+  padding:          5px;
+  text-align:       left;
+}
+.copyright {
+  font-size:        75%;
+  font-style:       italic;
+}
+.slogan {
+  font-size:        75%;
+  font-style:       italic;
+}
+.confirmentry {
+  font-weight:      600; 
+}
+
+/*** Tables ***/
+
+table {
+font-size:          1em;
+background-color:   #666699;
+border:             0px solid #666699;
+color:              white;
+padding:            5px 5px 2px;
+border-collapse:    collapse;
+}
+
+td, th {
+border:             thin dotted gray;
+}
+
+/*** Inputs ***/
+input[type=text] {
+  font-size:        115%;
+  width:            30em;
+}
+input[type=number] {
+  font-size:        115%;
+  width:            15em;
+}
+input[type=submit] {
+  font-size:        125%;
+}
+input[type=radio] {
+  font-size:        125%;
+}
+select {
+  font-size:        115%;
+}
