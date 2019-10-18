@@ -3,15 +3,15 @@
 {% block body %}
 
 <h2>{{ the_title }}</h2>
-
-<p>You submitted the following data:</p>
+<br>
+<p>Poniżej znajdują się szczegółowe wyliczenia dla podanych danych:</p>
 <table>
-<tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
-<tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+    <tr><td><b>Kwota netto:</b></td><td><b>{{ the_net }}</b></td></tr>
+    <tr><td>Zaliczka na PIT:</td><td>{{ pit }}</td></tr>
+    <tr><td><b>Kwota brutto:</b></td><td><b>{{ the_gross }}</b></td></tr>
+    <tr><td>Podstawa opodatkowania:</td><td>{{ the_base }}</td></tr>
+    <tr><td>Koszty uzyskania przychodu:</td><td>{{ the_cost }}</td></tr>
 </table>
-
-<p>When "{{the_phrase }}" is searched for "{{ the_letters }}", the following 
-results are returned:</p>
-<h3>{{ the_results }}</h3>
-
+<p>Aby zmienić wartości, kliknij poniższy przycisk.</p>
+<p><a onclick="location.href='/';"><input type="button" value="Zmień kryteria obliczeń"></p>
 {% endblock %}
