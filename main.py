@@ -10,7 +10,22 @@ def main_page() -> 'html':
 
 @app.route('/results', methods=['POST'])
 def results():
-    return request.form['salary'] + '  ' + request.form['cost_income']
+    type_of_salary = request.form['type_of_salary']
+    salary = float(request.form['salary'])
+    cost = float(request.form['cost_income'])
+    value_of_tax = 0.17
+    if type_of_salary == 'net' and cost == 0.2:
+        net = salary
+        gross = net * 10 / 8.64
+    elif type_of_salary == 'net' and cost == 0.5:
+        net = salary
+        gross = net * 10 / 9.15
+    else:
+        gross = salary
+        net = gross * (1-cost) * value_of_tax
+
+    tax = gross * cost * value_of_tax
+    return str(round(gross)) + '  ' + str(round(tax)) + '  ' + str(round(net))
 
 
 if __name__ == '__main__':

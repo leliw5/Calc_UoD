@@ -7,10 +7,14 @@
 <form method='POST' action='/results'>
 <table>
 <p>Na tej stronie możesz wyliczyć szczegóły dotyczące kwot netto/brutto, należnego podatku dla Umowy o dzieło.</p>
-<br><p>Aby to uczynić, wprowadź kwotę netto oraz wartość kosztów uzyskania przychodu.</p>
+<br><p>Aby to uczynić, wprowadź kwotę oraz wartość kosztów uzyskania przychodu.</p>
 
 <tr>
-    <td>Kwota netto:</td><td><input name='salary' type='NUMBER' width='60'></td>
+    <td>Kwota <select name="type_of_salary">
+		<option value="gross">brutto</option>
+		<option value="net">netto</option>
+	</select>:</td>
+    <td><input name='salary' type='NUMBER' width='60'></td>
 </tr>
 <tr>
     <td>Koszty uzyskania przychodu:</td>
