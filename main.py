@@ -23,8 +23,8 @@ def results():
     else:
         gross = salary
         net = gross * (1-cost) * value_of_tax
-
     tax = gross * cost * value_of_tax
+
     return str(round(gross)) + '  ' + str(round(tax)) + '  ' + str(round(net))
 
 
