@@ -15,17 +15,17 @@ def results():
     cost = float(request.form['cost_income'])
     value_of_tax = 0.17
     if type_of_salary == 'net' and cost == 0.2:
-        net = salary
-        gross = net * 10 / 8.64
+        gross = float(round(salary * 10 / 8.64))
     elif type_of_salary == 'net' and cost == 0.5:
-        net = salary
-        gross = net * 10 / 9.15
+        gross = round(float(salary * 10 / 9.15))
     else:
         gross = salary
-        net = gross * (1-cost) * value_of_tax
-    tax = gross * cost * value_of_tax
-
-    return str(round(gross)) + '  ' + str(round(tax)) + '  ' + str(round(net))
+    tax = round(gross * (1-cost) * value_of_tax)
+    net = gross - tax
+    result_cost = round(gross * cost)
+    result_base = round(gross * (1-cost))
+    return render_template('results.html', the_title='Kalkulator wynagrodzeń UoD - Wynik',
+                           the_net=net, pit=tax, the_gross=gross, the_cost=result_cost, the_base=result_base)
 
 
 if __name__ == '__main__':
