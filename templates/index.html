@@ -6,8 +6,9 @@
 <br>
 <form method='POST' action='/results'>
 <table>
-<p>Na tej stronie możesz wyliczyć szczegóły dotyczące kwot netto/brutto, należnego podatku dla Umowy o dzieło.</p>
-<br><p>Aby to uczynić, wprowadź kwotę oraz wartość kosztów uzyskania przychodu.</p>
+    <p>Na tej stronie możesz wyliczyć szczegóły dotyczące <b>kwot netto/brutto</b> oraz należnego <b>podatku</b> dla Umowy o dzieło.</p>
+
+<br><p>Poniżej wprowadź kwotę oraz wartość kosztów uzyskania przychodu.</p>
 <tr>
     <td>Kwota <select name="type_of_salary">
 		<option value="gross">brutto</option>
@@ -18,7 +19,7 @@
 <tr>
     <td>Koszty uzyskania przychodu:</td>
     <td>
-        <input type="radio" name="cost_income" value="0.2">20%
+        <input type="radio" name="cost_income" value="0.2" checked>20%
         <input type="radio" name="cost_income" value="0.5">50%
 	</td>
 </tr>
@@ -26,5 +27,10 @@
 <p>Aby sprawdzić wyliczenia, kliknij poniższy przycisk.</p>
 <p><input value='Oblicz' type='SUBMIT'></p>
 </form>
+<br>
+<br>
+<br>
+    <note>Kalkulator podaje prawidłowe wyliczenia w przypadku, gdy umowa nie jest zawarta z obecnym pracodawcą u którego
+    jesteś zatrudniony na podstawie umowy o pracę (nie uwzględniono obliczeń składek na ubezpieczenia).</note>
 
 {% endblock %}

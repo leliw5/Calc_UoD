@@ -6,11 +6,11 @@
 <br>
 <p>Poniżej znajdują się szczegółowe wyliczenia dla podanych danych:</p>
 <table>
-    <tr><td><b>Kwota netto:</b></td><td><b>{{ the_net }}</b></td></tr>
-    <tr><td>Zaliczka na PIT:</td><td>{{ pit }}</td></tr>
-    <tr><td><b>Kwota brutto:</b></td><td><b>{{ the_gross }}</b></td></tr>
-    <tr><td>Podstawa opodatkowania:</td><td>{{ the_base }}</td></tr>
-    <tr><td>Koszty uzyskania przychodu:</td><td>{{ the_cost }}</td></tr>
+    <tr><td><b>Kwota netto:</b></td><td class="left"><b>{{ "%.2f"|format(the_net) }}</b></td></tr>
+    <tr><td>Zaliczka na PIT:</td><td class="left">{{ "%.2f"|format(pit) }}</td></tr>
+    <tr><td><b>Kwota brutto:</b></td><td class="left"><b>{{ "%.2f"|format(the_gross) }}</b></td></tr>
+    <tr><td>Podstawa opodatkowania:</td><td class="left">{{ "%.2f"|format(the_base) }}</td></tr>
+    <tr><td>Koszty uzyskania przychodu:</td><td class="left">{{ "%.2f"|format(the_cost) }}</td></tr>
 </table>
 <p>Aby zmienić wartości, kliknij poniższy przycisk.</p>
 <p><a onclick="location.href='/';"><input type="button" value="Zmień kryteria obliczeń"></p>

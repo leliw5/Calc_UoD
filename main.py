@@ -14,7 +14,10 @@ def results():
     salary = float(request.form['salary'])
     cost = float(request.form['cost_income'])
     value_of_tax = 0.17
-    if type_of_salary == 'net' and cost == 0.2:
+    if salary <= 0:
+        error = 'Błąd! Musić podać kwotę większą od 0!'
+        return render_template('error.html', the_title='Kalkulator wynagrodzeń UoD - Błąd', the_error=error)
+    elif type_of_salary == 'net' and cost == 0.2:
         gross = float(round(salary * 10 / 8.64))
     elif type_of_salary == 'net' and cost == 0.5:
         gross = round(float(salary * 10 / 9.15))
